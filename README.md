@@ -5,7 +5,7 @@ Sometimes you used jwt token based auth on server to protect images and you also
 ```html
 <img [src]="/images/12345678.jpg" class="img-thumbnail"/>
 ```
-But the access will fail because the authentication header is not added to the html request.
+But the access will fail because the authentication header is not added to the http request.
 
 # Usage
 Dependency: angular2-jwt
