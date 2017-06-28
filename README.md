@@ -5,7 +5,7 @@ Sometimes you used token based auth on server to protect images and you also wan
 <img [src]="/images/12345678.jpg" class="img-thumbnail"/>
 ```
 
-#Usage
+# Usage
 ```html
 <img [src]="/images/12345678.jpg | auth" class="img-thumbnail"/>
 ```
