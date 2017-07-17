@@ -66,7 +66,7 @@ export class AuthPipe implements PipeTransform, OnDestroy {
 
   transform(url: string): any {
     const obj = this.internalTransform(url);
-    return this.asyncTrasnform(obj);
+    return this.asyncTransform(obj);
   }
 
   private internalTransform(url: string): Observable<any> {
@@ -85,7 +85,7 @@ export class AuthPipe implements PipeTransform, OnDestroy {
     return this.result;
   }
 
-  private asyncTrasnform(obj: Observable<any>): any {
+  private asyncTransform(obj: Observable<any>): any {
     if (!this._obj) {
       if (obj) {
         this._subscribe(obj);
@@ -95,7 +95,7 @@ export class AuthPipe implements PipeTransform, OnDestroy {
     }
     if (obj !== this._obj) {
       this._dispose();
-      return this.asyncTrasnform(obj);
+      return this.asyncTransform(obj);
     }
     if (this._latestValue === this._latestReturnedValue) {
       return this._latestReturnedValue;
